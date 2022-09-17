@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+    <script src="./index.js"></script>
+    <script>    
+        let myApp = new App(true, []);
+        const toggle = () => {
+            myApp.isGrid = !myApp.isGrid
+            myApp.getData(myApp.isGrid)
+            if (myApp.isGrid) {
+                document.getElementById('grid').style.display = "none";
+                document.getElementById('table').style.display = "block";
+            } else {
+                document.getElementById('grid').style.display = "block";
+                document.getElementById('table').style.display = "none";
+            }
+            var input = document.getElementById("myInput");
+            input.value = ""
+        }
+    </script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="toggle()">
+
+    <div class="container" >
+        <div>
+            <button onclick="toggle()">Toggle</button>
+        </div>
+        <br>
+        <div>
+            <input type="text"  id="myInput" onkeyup="myApp.isGrid ? myApp.searchTable() : myApp.searchGrid()" placeholder="Search.." name="search">
+        </div>
+        <div class="jumbotron" id="grid">
+            <h1 id="head">Grid</h1>
+            <div id='demo-grid'></div>
+        </div>
+        <div class="jumbotron" id="table">
+            <h1>table</h1>
+            <div id='demo-table'></div>
+        </div>
+    </div>
+
+</body>
+</html>

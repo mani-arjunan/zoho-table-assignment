@@ -1,0 +1,81 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+  
+  #demo-grid{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #demo-table{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid{
+    border: solid 1px black;
+    width: 200px;
+    padding: 20px;
+    align-content: center;
+    margin: 20px;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  .image{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transition: transform 450ms;
+    cursor: pointer;
+  }
+  
+  .image:hover{
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  
+  
+  .description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .name{
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  table {
+    text-align: left;
+    position: relative;
+    border-collapse: collapse; 
+  }
+  th, td {
+    padding: 0.25rem;
+  }
+  tr.red th {
+    background: red;
+    color: white;
+  }
+  tr.green th {
+    background: green;
+    color: white;
+  }
+  tr.purple th {
+    background: purple;
+    color: white;
+  }
+  th {
+    background: white;
+    position: sticky;
+    top: 0; /* Don't forget this, required for the stickiness */
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+  }
